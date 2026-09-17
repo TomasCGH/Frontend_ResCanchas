@@ -1,59 +1,126 @@
-# RegistroClientes
+# ResCanchas Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+Frontend web del proyecto ResCanchas, desarrollado con Angular para ofrecer una interfaz moderna y funcional para la gestión de reservas y administración de canchas deportivas.
 
-## Development server
+## Descripción general
 
-To start a local development server, run:
+Este repositorio contiene la interfaz de usuario del sistema. Su objetivo es permitir a los usuarios:
+
+- iniciar sesión en la plataforma
+- registrar encargados
+- acceder al panel principal del sistema
+- navegar entre módulos de gestión y administración
+- consumir la API REST del backend del proyecto
+
+El frontend y el backend forman parte del mismo proyecto, trabajando de forma complementaria para brindar una experiencia completa de reservas deportivas.
+
+## Repositorio relacionado
+
+- Backend: https://github.com/TomasCGH/Backend_ResCanchas
+
+## Stack tecnológico
+
+- Angular 19
+- TypeScript
+- RxJS
+- Angular Router
+- HTML5 / CSS3
+
+## Funcionalidades principales
+
+- login de usuario
+- registro de encargado
+- interfaz de dashboard
+- rutas protegidas por guard de autenticación
+- consumo de servicios REST para la lógica del negocio
+
+## Requisitos previos
+
+Antes de ejecutar el proyecto asegúrate de tener instalado:
+
+- Node.js 18 o superior
+- npm
+- Angular CLI (opcional, pero recomendado)
+
+## Instalación
+
+Clona el repositorio e instala las dependencias:
+
+```bash
+npm install
+```
+
+## Ejecución en desarrollo
+
+```bash
+npm start
+```
+
+O también:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Luego abre tu navegador en:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```text
+http://localhost:4200/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Compilación para producción
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Los archivos compilados se generarán en la carpeta `dist/` del proyecto.
 
-## Running unit tests
+## Estructura del proyecto
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```text
+Frontend_ResCanchas/
+├── src/
+│   ├── app/
+│   │   ├── dashboard/
+│   │   ├── guards/
+│   │   ├── login/
+│   │   ├── registrar-encargado/
+│   │   ├── servicios/
+│   │   ├── app.component.ts
+│   │   ├── app.module.ts
+│   │   ├── app.routes.ts
+│   │   └── ...
+│   ├── assets/
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.css
+├── angular.json
+├── package.json
+├── tsconfig.json
+├── .gitignore
+├── README.md
+└── ...
 ```
 
-## Running end-to-end tests
+## Rutas principales
 
-For end-to-end (e2e) testing, run:
+La aplicación define rutas como:
 
-```bash
-ng e2e
-```
+- `/login`
+- `/dashboard`
+- `/registrar`
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Estas rutas están gestionadas mediante Angular Router y protegidas según la lógica de acceso definida en el guard de registro.
 
-## Additional Resources
+## Estado del proyecto
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+El frontend se encuentra en desarrollo activo como parte del sistema ResCanchas, integrándose directamente con el backend para ofrecer una solución completa de gestión deportiva.
+
+## Licencia
+
+Actualmente no se ha definido una licencia pública para este repositorio.
+
+---
+
+Proyecto frontend del sistema ResCanchas.
